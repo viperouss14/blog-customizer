@@ -4,6 +4,11 @@ import { Select } from './Select';
 import { useState } from 'react';
 
 const meta: Meta<typeof Select> = {
+	parameters: {
+		backgrounds: {
+			default: 'dark',
+		},
+	},
 	component: Select,
 };
 

@@ -4,6 +4,11 @@ import { RadioGroup } from './RadioGroup';
 import { useState } from 'react';
 
 const meta: Meta<typeof RadioGroup> = {
+	parameters: {
+		backgrounds: {
+			default: 'dark',
+		},
+	},
 	component: RadioGroup,
 };
 
