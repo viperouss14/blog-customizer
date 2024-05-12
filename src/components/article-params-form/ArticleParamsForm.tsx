@@ -72,6 +72,8 @@ export const ArticleParamsForm = ({
 			}
 		};
 
+		if (!isSidebarOpen) return;
+
 		window.addEventListener('mousedown', handleClickOutside);
 
 		return () => {
@@ -80,10 +82,9 @@ export const ArticleParamsForm = ({
 	}, [isSidebarOpen]);
 
 	return (
-		<>
+		<div ref={sidebarRef}>
 			<ArrowButton onClick={toggleSidebar} isOpen={isSidebarOpen} />
 			<aside
-				ref={sidebarRef}
 				className={clsx(styles.container, {
 					[styles.container_open]: isSidebarOpen,
 				})}>
@@ -132,6 +133,6 @@ export const ArticleParamsForm = ({
 					</div>
 				</form>
 			</aside>
-		</>
+		</div>
 	);
 };
